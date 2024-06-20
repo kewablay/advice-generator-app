@@ -47,7 +47,7 @@ const displayAdvice = async () => {
     const data = await response.json();
     console.log(data);
     document.querySelector(".advice-id").innerHTML = "ADVICE #" + data.slip.id;
-    document.querySelector(".advice-text").innerHTML = data.slip.advice;
+    document.querySelector(".advice-text").innerText = `"${data.slip.advice}" `;
   } catch (error) {
     console.error("Fetch error:", error);
     document.querySelector(
